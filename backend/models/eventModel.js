@@ -10,44 +10,29 @@ const eventSchema = mongoose.Schema({
     type: String,
     required: [true, "Please add a time field"],
   },
-  northLat: {
+  pathWidth: {
     type: String,
     required: [true, "Please add a northLat field"],
   },
 
-  northLong: {
+  centerDuration: {
     type: String || null,
     required: [true, "Please add a northLong field"],
   },
 
-  southLat: {
-    type: String,
+  northCoordinates: {
+    type: Object,
     required: [true, "Please add a southLat field"],
   },
 
-  southLong: {
-    type: String,
+  centerCoordinates: {
+    type: Object,
     required: [false, "Please add a southLong field"],
   },
 
-  centerLat: {
-    type: String,
+  southCoordinates: {
+    type: Object,
     required: [true, "Please add a centerLat field"],
-  },
-
-  centerLong: {
-    type: String,
-    required: [true, "Please add a centerLong field"],
-  },
-
-  pathWidth: {
-    type: String,
-    required: [true, "Please add a pathWidth field"],
-  },
-
-  centerDuration: {
-    type: String,
-    required: [true, "Please add a centerDuration field"],
   },
 });
 
